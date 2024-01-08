@@ -31,6 +31,8 @@ The printer works by sending ESC/POS commands. Use a library like https://github
 List<byte> result = new();
 result.AddRange(ESCPOS.Commands.InitializePrinter);
 //TODO: Create commands to whatever you want to print
+//Pro tip: Sending QR code ESC/POS command will cause the printer to print it twice. This may be the case with other
+//         barcode formats as well. Generate it as bitmap and send that to the printer to fix this issue.
 
 //It is recommended to use 6-8 line feeds at the end with default font size for a good cutting point.
 for (int i = 0; i < 8; i++)
