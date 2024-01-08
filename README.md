@@ -54,8 +54,8 @@ if (!await printer.InitializePrinterAsync()) {
 printer.PrinterStatusChanged += (o, status) => {
   //TODO: inform the user of status changes.
 
-  //Recommendation: Only inform from Q2PrinterStatus.PrintingHeadOverheat, Q2PrinterStatus.Ready and Q2PrinterStatus.Busy. Other statuses will cause the
-  //                printing to fail. You can check that reason later in the code.
+  //Recommendation: Only inform from Q2PrinterStatus.PrintingHeadOverheat, Q2PrinterStatus.Ready and Q2PrinterStatus.Busy.
+  //                Other statuses will cause the printing to fail. You can check that reason later in the code.
 };
 
 if (!await printer.SendEscPosCommandsAsync(result.ToArray())) {
@@ -63,8 +63,8 @@ if (!await printer.SendEscPosCommandsAsync(result.ToArray())) {
   //since the printing will automatically resume. This library handles this case (at least, it should).
   Q2PrinterStatus status = await printer.GetPrinterStatusAsync();
 
-  //Out of paper and other statuses are reported here. In case of Q2PrinterStatus.MotorOverheat you need to reinitialize the printer
-  //with printer.InitializePrinterAsync according to the docs (not tested functionality, never occurred to me).
+  //Out of paper and other statuses are reported here. In case of Q2PrinterStatus.MotorOverheat you need to reinitialize
+  //the printer with printer.InitializePrinterAsync according to the docs (not tested functionality, never occurred to me).
   //I also suggest reinitialization on each print.
 }
 ```
