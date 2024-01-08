@@ -1,5 +1,5 @@
 # TomiSoft.Printing.Thermal.AndroidQ2Pos
-.NET thermal printer driver for touchscreen Android Q2 POS terminals.
+.NET thermal printer support library for touchscreen Android Q2 POS terminals.
 
 ## Supported devices and platforms
 Tested with an Android Q2 device with 1 GiB RAM, running Android 6.0 / API 23, targeting .NET 8.
