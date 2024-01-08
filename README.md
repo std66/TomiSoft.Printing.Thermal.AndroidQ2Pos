@@ -70,3 +70,6 @@ if (!await printer.SendEscPosCommandsAsync(result.ToArray())) {
   //I also suggest reinitialization on each print.
 }
 ```
+
+## Author
+Tamás Sinku (sinkutamas@gmail.com)
