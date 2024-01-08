@@ -45,6 +45,8 @@ if (printer is null) {
   return;
 }
 
+//TODO: Any async method call below may throw InvalidOperationException in case printer.IsConnected is false.
+
 if (!await printer.InitializePrinterAsync()) {
   //Failed to initialize the printer
   return;
