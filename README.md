@@ -2,10 +2,10 @@
 .NET thermal printer support library for touchscreen Android Q2 POS terminals.
 
 ## Supported devices and platforms
-Tested with an Android Q2 device with 1 GiB RAM, running Android 6.0 / API 23, targeting .NET 8.
+Tested with Jicai JP-Q2 device with 1 GiB RAM, running Android 6.0 / API 23, targeting .NET 8.
 Available for Android only, even though the IQ2ThermalPrinter interface is available for all platforms.
 
-## Where is the NuGet package
+## Where is the NuGet package?
 I didn't set up CI/CD pipeline for this repo. Maybe I will in the future, maybe not. Pull in this project
 into your solution.
 
