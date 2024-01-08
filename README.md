@@ -5,6 +5,10 @@
 Tested with an Android Q2 device with 1 GiB RAM, running Android 6.0 / API 23, targeting .NET 8.
 Available for Android only, even though the IQ2ThermalPrinter interface is available for all platforms.
 
+## Where is the NuGet package
+I didn't set up CI/CD pipeline for this repo. Maybe I will in the future, maybe not. Pull in this project
+into your solution.
+
 ## Setting up
 Initialize the binding in your MAUI application, in file Platforms/Android/MainActivity.cs
 
