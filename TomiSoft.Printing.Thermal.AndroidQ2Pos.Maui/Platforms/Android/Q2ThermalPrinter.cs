@@ -1,6 +1,7 @@
 ﻿using Android.Content;
 using Android.OS;
 using Com.Iposprinter.Iposprinterservice;
+using System;
 using System.Diagnostics;
 
 namespace TomiSoft.Printing.Thermal.AndroidQ2Pos.Maui.Platforms.Android {
@@ -64,7 +65,7 @@ namespace TomiSoft.Printing.Thermal.AndroidQ2Pos.Maui.Platforms.Android {
 
         public async Task<bool> SendEscPosCommandsAsync(byte[] commands) {
             if (commands == null)
-                throw new InvalidOperationException($"No data to print. Calling {nameof(SendEscPosCommandsAsync)} is necessary before calling this method.");
+                throw new ArgumentNullException(nameof(commands));
 
             Q2PrinterStatus Q2PrinterStatus = await GetPrinterStatusAsync();
             if (Q2PrinterStatus != Q2PrinterStatus.Ready) {
